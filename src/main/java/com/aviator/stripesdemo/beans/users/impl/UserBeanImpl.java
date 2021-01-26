@@ -21,8 +21,8 @@
 package com.aviator.stripesdemo.beans.users.impl;
 
 import com.aviator.stripesdemo.beans.users.UserBeanI;
-import com.aviator.stripesdemo.demo.dao.users.UserDaoI;
-import com.aviator.stripesdemo.demo.model.MessageModel;
+import com.aviator.stripesdemo.dao.users.UserDaoI;
+import com.aviator.stripesdemo.model.MessageModel;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.*;

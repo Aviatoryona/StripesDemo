@@ -22,8 +22,8 @@ package com.aviator.stripesdemo.dao.users.impl;
 
 import com.aviator.stripesdemo.dao.generic.GenericDao;
 import com.aviator.stripesdemo.dao.users.UserDaoI;
-import com.aviator.stripesdemo.demo.model.MessageModel;
-import com.aviator.stripesdemo.demo.model.User;
+import com.aviator.stripesdemo.model.MessageModel;
+import com.aviator.stripesdemo.model.User;
 
 import javax.persistence.EntityManager;
 

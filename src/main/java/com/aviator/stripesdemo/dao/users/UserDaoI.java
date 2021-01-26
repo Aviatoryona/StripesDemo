@@ -21,10 +21,10 @@
 package com.aviator.stripesdemo.dao.users;
 
 import com.aviator.stripesdemo.dao.generic.GenericDaoI;
-import com.aviator.stripesdemo.demo.model.MessageModel;
-import com.aviator.stripesdemo.demo.model.User;
+import com.aviator.stripesdemo.model.MessageModel;
+import com.aviator.stripesdemo.model.User;
 
-public interface UserDaoI extends GenericDaoI<User,Long> {
+public interface UserDaoI extends GenericDaoI<User, Long> {
     MessageModel getUsers();
 
     MessageModel createUser(User user);

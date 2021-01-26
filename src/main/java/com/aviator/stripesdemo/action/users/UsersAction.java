@@ -20,9 +20,9 @@
 
 package com.aviator.stripesdemo.action.users;
 
+import com.aviator.stripesdemo.beans.users.UserBeanI;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.aviator.stripesdemo.demo.beans.users.UserBeanI;
 import net.sourceforge.stripes.action.*;
 
 import javax.ejb.EJB;

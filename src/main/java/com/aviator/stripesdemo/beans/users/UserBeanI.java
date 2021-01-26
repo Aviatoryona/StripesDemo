@@ -20,7 +20,8 @@
 
 package com.aviator.stripesdemo.beans.users;
 
-import com.aviator.stripesdemo.demo.model.MessageModel;
+
+import com.aviator.stripesdemo.model.MessageModel;
 
 import javax.ejb.Remote;
 
