@@ -1,0 +1,13 @@
+demo/dao/generic/GenericDao.class
+demo/model/Address.class
+demo/action/users/UsersAction.class
+demo/model/Company.class
+demo/beans/users/impl/UserBeanImpl.class
+demo/dao/users/UserDaoI.class
+demo/model/Geo.class
+demo/dao/users/impl/UsersDao.class
+demo/model/MessageModel.class
+demo/beans/users/UserBeanI.class
+MyApp.class
+demo/model/User.class
+demo/dao/generic/GenericDaoI.class
