@@ -1,0 +1,15 @@
+com/aviator/MyApp.class
+com/aviator/stripesdemo/model/Address.class
+com/aviator/stripesdemo/model/Company.class
+com/aviator/stripesdemo/beans/users/impl/UserBeanImpl.class
+com/aviator/stripesdemo/model/MessageModel.class
+com/aviator/stripesdemo/handlers/BaseActionBeanContextSP.class
+com/aviator/stripesdemo/model/User.class
+com/aviator/stripesdemo/dao/generic/GenericDaoI.class
+com/aviator/stripesdemo/dao/users/UserDaoI.class
+com/aviator/stripesdemo/common/BaseActionBean.class
+com/aviator/stripesdemo/dao/users/impl/UsersDao.class
+com/aviator/stripesdemo/beans/users/UserBeanI.class
+com/aviator/stripesdemo/action/users/UsersAction.class
+com/aviator/stripesdemo/model/Geo.class
+com/aviator/stripesdemo/dao/generic/GenericDao.class

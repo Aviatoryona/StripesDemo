@@ -20,24 +20,30 @@
 
 package com.aviator.stripesdemo.action.users;
 
-import com.aviator.stripesdemo.beans.users.UserBeanI;
+import com.aviator.stripesdemo.common.BaseActionBean;
+import com.aviator.stripesdemo.model.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.sourceforge.stripes.action.*;
+import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StreamingResolution;
+import net.sourceforge.stripes.action.UrlBinding;
 
-import javax.ejb.EJB;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 
 @UrlBinding("/Users")
-public class UsersAction {
+@Path("/Users")
+public class UsersAction extends BaseActionBean {
 
-    @EJB
-    UserBeanI userBeanI;
+    User user;
 
-    @DefaultHandler
+    //    @DefaultHandler
+    @GET
     public Resolution getAllUsers() throws JsonProcessingException {
-        ObjectMapper objetMapper=new ObjectMapper();
-        return new StreamingResolution(
+        ObjectMapper objetMapper = new ObjectMapper();
+        return new StreamingResolution("application/json",
                 objetMapper.writeValueAsString(userBeanI.getAllUser())
         );
     }
+
 }

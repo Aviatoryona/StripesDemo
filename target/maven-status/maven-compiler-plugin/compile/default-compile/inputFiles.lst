@@ -1,7 +1,9 @@
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/model/MessageModel.java
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/model/User.java
+/home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/handlers/BaseActionBeanContextSP.java
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/beans/users/impl/UserBeanImpl.java
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/model/Company.java
+/home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/common/BaseActionBean.java
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/MyApp.java
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/dao/users/impl/UsersDao.java
 /home/Aviator/Documents/Documents/StripesDemo/src/main/java/com/aviator/stripesdemo/beans/users/UserBeanI.java
