@@ -20,30 +20,95 @@
 
 package com.aviator.stripesdemo.action.users;
 
-import com.aviator.stripesdemo.common.BaseActionBean;
+import com.aviator.stripesdemo.beans.users.UserBeanI;
+import com.aviator.stripesdemo.model.MessageModel;
+import com.aviator.stripesdemo.model.Pojo;
 import com.aviator.stripesdemo.model.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.sourceforge.stripes.action.Resolution;
-import net.sourceforge.stripes.action.StreamingResolution;
-import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.action.ActionBean;
+import net.sourceforge.stripes.action.ActionBeanContext;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import javax.ejb.EJB;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-@UrlBinding("/Users")
+//@UrlBinding("/Users")
 @Path("/Users")
-public class UsersAction extends BaseActionBean {
+public class UsersAction implements ActionBean {
 
-    User user;
+    @EJB
+    UserBeanI userBeanI;
 
     //    @DefaultHandler
     @GET
-    public Resolution getAllUsers() throws JsonProcessingException {
-        ObjectMapper objetMapper = new ObjectMapper();
-        return new StreamingResolution("application/json",
-                objetMapper.writeValueAsString(userBeanI.getAllUser())
+    @Produces(value = {MediaType.APPLICATION_JSON})
+    public String getAllUsers() throws JsonProcessingException {
+        Map<String, Object> map = new HashMap<>();
+        map.put("count", 1234);
+        map.put("value", 789800);
+        map.put("County", "Taita Tavete");
+        if (userBeanI != null) {
+            map.put("people", userBeanI.getAllUser());
+        } else {
+            map.put("EJB", "Not initialized");
+        }
+
+        ArrayList<Pojo> pojos = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            ArrayList<Integer> integers = new ArrayList<>();
+            for (int j = 0; j < i; j++) {
+                integers.add(j);
+            }
+            pojos.add(new Pojo("Pojo " + i, integers));
+        }
+        map.put("Pojo", pojos);
+
+//        return new StreamingResolution(MediaType.APPLICATION_JSON,
+//                objetMapper.writeValueAsString(
+//                        new MessageModel(
+//                                true,
+//                                "Done",
+//                                map
+//                        )
+//                )
+//        );
+
+        return toJson(
+                new MessageModel(
+                        true,
+                        "Done",
+                        map
+                )
         );
     }
 
+
+    @POST
+    @Consumes(value = {MediaType.APPLICATION_JSON})
+    @Produces(value = {MediaType.APPLICATION_JSON})
+    public String createUser(User user) throws JsonProcessingException {
+        return toJson(userBeanI.createUser(user));
+    }
+
+
+    private String toJson(Object data) throws JsonProcessingException {
+        return new ObjectMapper()
+                .writeValueAsString(data);
+    }
+
+    ActionBeanContext actionBeanContext;
+
+    @Override
+    public void setContext(ActionBeanContext actionBeanContext) {
+        this.actionBeanContext = actionBeanContext;
+    }
+
+    @Override
+    public ActionBeanContext getContext() {
+        return this.actionBeanContext;
+    }
 }

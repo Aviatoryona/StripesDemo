@@ -22,10 +22,12 @@ package com.aviator.stripesdemo.beans.users;
 
 
 import com.aviator.stripesdemo.model.MessageModel;
+import com.aviator.stripesdemo.model.User;
 
 import javax.ejb.Remote;
 
 @Remote
 public interface UserBeanI {
     MessageModel getAllUser();
+    MessageModel createUser(User user);
 }

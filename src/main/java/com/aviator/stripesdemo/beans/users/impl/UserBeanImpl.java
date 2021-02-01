@@ -23,6 +23,7 @@ package com.aviator.stripesdemo.beans.users.impl;
 import com.aviator.stripesdemo.beans.users.UserBeanI;
 import com.aviator.stripesdemo.dao.users.UserDaoI;
 import com.aviator.stripesdemo.model.MessageModel;
+import com.aviator.stripesdemo.model.User;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.*;
@@ -52,5 +53,10 @@ public class UserBeanImpl implements UserBeanI {
     @Override
     public MessageModel getAllUser() {
          return userDaoI.getUsers();
+    }
+
+    @Override
+    public MessageModel createUser(User user) {
+        return userDaoI.createUser(user);
     }
 }

@@ -13,3 +13,4 @@ com/aviator/stripesdemo/beans/users/UserBeanI.class
 com/aviator/stripesdemo/action/users/UsersAction.class
 com/aviator/stripesdemo/model/Geo.class
 com/aviator/stripesdemo/dao/generic/GenericDao.class
+com/aviator/stripesdemo/model/Pojo.class

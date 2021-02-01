@@ -23,25 +23,25 @@ package com.aviator.stripesdemo.model;
 import java.io.Serializable;
 
 public class MessageModel implements Serializable {
-    boolean isSuccess;
+    boolean success;
     String message;
     Object data;
 
     public MessageModel() {
     }
 
-    public MessageModel(boolean isSuccess, String message, Object data) {
-        this.isSuccess = isSuccess;
+    public MessageModel(boolean success, String message, Object data) {
+        this.success = success;
         this.message = message;
         this.data = data;
     }
 
     public boolean isSuccess() {
-        return isSuccess;
+        return success;
     }
 
     public void setSuccess(boolean success) {
-        isSuccess = success;
+        this.success = success;
     }
 
     public String getMessage() {
